@@ -5,7 +5,6 @@ const db = require('../db/petsitters')
 
 module.exports = router
 
-// Get listings for petsitters
 router.get('/', (req, res) => {
   db.listPetsitters()
     .then((petsitters) => {
@@ -18,7 +17,6 @@ router.get('/', (req, res) => {
     })
 })
 
-// Add new petsitters listing
 router.post('/', (req, res) => {
   const listingData = req.body
   db.addListing(listingData)
@@ -32,7 +30,6 @@ router.post('/', (req, res) => {
     })
 })
 
-// Delete a single petsitters listing
 router.delete('/:id', checkJwt, (req, res) => {
   const id = Number(req.params.id)
   const auth0Id = req.user?.sub
