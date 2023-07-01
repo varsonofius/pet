@@ -1,5 +1,4 @@
 import { setUser } from './actions/user'
-// import { setWaiting, clearWaiting } from './actions/waiting'
 import { getUser } from './apis/registerationApi'
 import { dispatch, getState } from './store'
 
