@@ -1,7 +1,7 @@
 const jwt = require('express-jwt')
 const jwks = require('jwks-rsa')
 
-const domain = 'https://harakeke-2022-jinny.au.auth0.com'
+const domain = 'https://mirabolus-jinny.au.auth0.com'
 const audience = 'https://petsitter/api'
 
 const checkJwt = jwt({
